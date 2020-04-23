@@ -13,6 +13,9 @@
 },
   "author": "Zayyad Yunus",
   "license": "ISC",
+  "dependencies": {
+    "mongodb":"^3.5.6"
+  },
   "bugs": {
   "url": "https://git.heroku.com/comp20companies.git"
 },
