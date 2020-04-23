@@ -20,7 +20,7 @@ function main() {
             var dataArray = data.split(/\r?\n/);
 
             /* Split each item in the array by comma appearances */
-            for (i = 0; i < dataArray.length - 1; i++) {    /* Empty string at end of file */
+            for (i = 1; i < dataArray.length - 1; i++) {    /* Empty string at end of file */
                 var newItem = dataArray[i].split(",");
                 var newData = {"company": newItem[0], "ticker": newItem[1]};
 
@@ -34,7 +34,6 @@ function main() {
                 });
             }
         });
-        console.log("Success!");
     });
 }
 
