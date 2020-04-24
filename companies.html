@@ -9,7 +9,7 @@
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 background: #00b2b2;
             }
-            h1, h2 {
+            h1, h2, h3, h4, h5, h6{
                 background: #020129;
                 color: #ffffff;
             }
@@ -26,6 +26,7 @@
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             }
         </style>
+        <script type="text/javascript" src="companies_find.js"></script>
     </head>
     <body>
         <h1>Companies and their stock tickers</h1>
@@ -34,10 +35,31 @@
         <form>
             <label for="user_input"><b>Company Name or Stock Ticker:</b></label><br>
             <input type="text" id="user_input" name="user_input"><br>
+
             <label for="by_name">By name: </label>
             <input type="radio" id="by_name" name="user_choice" value="by_name">
-            <label for="by_name">or by ticker: </label>
+            <label for="by_ticker">or by ticker: </label>
             <input type="radio" id="by_ticker" name="user_choice" value="by_name"><br>
+
+            <button type = "button" onclick = "search()"> Find! </button><br>
         </form>
+
+        <h3>Results</h3>
+        <p id="result">
+            <!--STUB-->
+        </p>
+
+        <script type="text/javascript">
+            function search(){
+                var str_input = document.getElementById("user_input").value;
+                var radio_input = document.getElementsByName("user_choice");
+                for (i = 0; i < radio_input.length; i++) {
+                    if (radio_input[i].checked) {
+                        document.getElementById("result").innerHTML += 
+                        find_company(str_input, radio_input[i].value);
+                    }
+                }
+            }
+        </script>
     </body>
 </html>

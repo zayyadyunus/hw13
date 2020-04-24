@@ -2,9 +2,9 @@
   "name": "companies",
   "version": "1.0.0",
   "description": "node app ",
-  "main": "companies.js",
+  "main": "companies_find.js",
   "scripts": {
-    "start": "node companies.js"
+    "start": "node companies_find.js"
   },
   "repository": {
     "type": "git",
