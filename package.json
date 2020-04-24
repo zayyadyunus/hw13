@@ -4,16 +4,19 @@
   "description": "node app ",
   "main": "companies.js",
   "scripts": {
-  "start": "node companies.js"
-},
+    "start": "node companies.js"
+  },
   "repository": {
-  "type": "git",
-  "url": ""
-},
+    "type": "git",
+    "url": ""
+  },
   "author": "Zayyad Yunus",
   "license": "ISC",
   "bugs": {
-  "url": "https://git.heroku.com/comp20companies.git"
-},
-  "homepage": "https://git.heroku.com/comp20companies.git"
+    "url": "https://git.heroku.com/comp20companies.git"
+  },
+  "homepage": "https://git.heroku.com/comp20companies.git",
+  "dependencies": {
+    "mongodb": "^3.5.6"
+  }
 }
